@@ -1,4 +1,15 @@
 // IronLog PWA - Main App
+(function() {
+  // Force fresh version - remove any stale SW cache
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(regs => {
+      regs.forEach(r => r.unregister());
+    }).then(() => {
+      caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+    });
+  }
+})();
+
 const App = {
   state: {
     screen: 'home',       // home | workout | result
