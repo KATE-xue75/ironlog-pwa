@@ -56,7 +56,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "12-15",
             "note": "超级组"
           }
-        ]
+        ],
+        "focus_en": "Push (Chest + Shoulders + Triceps)"
       },
       {
         "day": 2,
@@ -99,7 +100,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": "超级组，后束优先"
           }
-        ]
+        ],
+        "focus_en": "Pull (Back + Biceps)"
       },
       {
         "day": 3,
@@ -142,7 +144,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": "超级组，全程控制"
           }
-        ]
+        ],
+        "focus_en": "Legs (Quads + Hamstrings + Calves)"
       },
       {
         "day": 4,
@@ -191,7 +194,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "12-15",
             "note": "超级组"
           }
-        ]
+        ],
+        "focus_en": "Push (Chest + Shoulders + Triceps)"
       },
       {
         "day": 5,
@@ -234,7 +238,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-15",
             "note": "控制离心"
           }
-        ]
+        ],
+        "focus_en": "Pull (Back + Biceps)"
       },
       {
         "day": 6,
@@ -283,14 +288,17 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Legs (Squat + Glutes + Calves)"
       },
       {
         "day": 7,
         "focus": "休息",
-        "rest": true
+        "rest": true,
+        "focus_en": "Rest"
       }
-    ]
+    ],
+    "desc_en": "Reddit r/Fitness classic. Push/Pull/Legs rotation, each muscle group hit twice per week — the gold standard for hypertrophy."
   },
   {
     "id": "upper_lower_4day",
@@ -343,7 +351,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-15",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Upper Body - Strength"
       },
       {
         "day": 2,
@@ -386,7 +395,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "30-60秒",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Lower Body - Strength"
       },
       {
         "day": 3,
@@ -435,7 +445,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Upper Body - Hypertrophy"
       },
       {
         "day": 4,
@@ -484,21 +495,26 @@ var WORKOUT_TEMPLATES = [
             "reps": "20-25",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Lower Body - Hypertrophy"
       },
       {
         "day": 5,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "Upper/Lower alternating split, each muscle group trained twice weekly. Ideal for intermediate lifters with limited time."
   },
   {
     "id": "fullbody_3day",
@@ -551,11 +567,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "30-60秒",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Full Body A"
       },
       {
         "day": 2,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 3,
@@ -598,11 +616,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-15",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Full Body B"
       },
       {
         "day": 4,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 5,
@@ -645,17 +665,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "20",
             "note": "每侧"
           }
-        ]
+        ],
+        "focus_en": "Full Body C"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "每次训练覆盖全身。适合新手入门、恢复期训练、或时间紧张的老手维持。效率最高。"
   },
   {
     "id": "bro_split_5day",
@@ -708,7 +732,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "AMRAP",
             "note": "收尾"
           }
-        ]
+        ],
+        "focus_en": "Chest"
       },
       {
         "day": 2,
@@ -751,7 +776,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-12",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Back"
       },
       {
         "day": 3,
@@ -794,7 +820,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-12",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Shoulders"
       },
       {
         "day": 4,
@@ -843,7 +870,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Legs"
       },
       {
         "day": 5,
@@ -886,17 +914,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-15",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Arms"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "Classic bodybuilding split — one muscle group per day, maximum volume and pump. The old-school way to build mass."
   },
   {
     "id": "phul_4day",
@@ -949,7 +981,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "6-10",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Upper Body - Strength"
       },
       {
         "day": 2,
@@ -986,11 +1019,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "8-12",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Lower Body - Strength"
       },
       {
         "day": 3,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 4,
@@ -1045,7 +1080,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "12-15",
             "note": "超级组"
           }
-        ]
+        ],
+        "focus_en": "Upper Body - Hypertrophy"
       },
       {
         "day": 5,
@@ -1094,17 +1130,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Lower Body - Hypertrophy"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "Power/Hypertrophy Upper/Lower. Combines strength-focused work with high-volume hypertrophy for balanced gains."
   },
   {
     "id": "beginner_3day",
@@ -1138,11 +1178,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "5",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Workout A"
       },
       {
         "day": 2,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 3,
@@ -1166,11 +1208,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "5",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Workout B"
       },
       {
         "day": 4,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 5,
@@ -1194,17 +1238,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "5",
             "note": "比上次+5kg"
           }
-        ]
+        ],
+        "focus_en": "Workout A (Repeat)"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "最简练的基础课表。只做最核心的复合动作，每次训练45分钟。适合零基础新手建立力量根基。"
   },
   {
     "id": "bodyweight_anytime",
@@ -1262,11 +1310,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-15",
             "note": "收尾"
           }
-        ]
+        ],
+        "focus_en": "Bodyweight A"
       },
       {
         "day": 2,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 3,
@@ -1308,11 +1358,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "20",
             "note": "每侧"
           }
-        ]
+        ],
+        "focus_en": "Bodyweight B"
       },
       {
         "day": 4,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 5,
@@ -1354,17 +1406,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "30-45秒",
             "note": "可用背包加重"
           }
-        ]
+        ],
+        "focus_en": "Bodyweight C"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "0器械，在家就能练。适合出差、居家、或不想去健身房的日子。全身循环，燃脂+塑形。"
   },
   {
     "id": "dumbbell_home",
@@ -1416,7 +1472,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Upper Push (Chest + Shoulders + Triceps)"
       },
       {
         "day": 2,
@@ -1452,11 +1509,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "40-60秒",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Lower Body (Legs + Glutes)"
       },
       {
         "day": 3,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 4,
@@ -1492,7 +1551,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "12-15",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Upper Pull (Back + Biceps + Rear Delts)"
       },
       {
         "day": 5,
@@ -1528,17 +1588,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-15",
             "note": "收尾"
           }
-        ]
+        ],
+        "focus_en": "Full Body + Core"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "只需一对可调哑铃。上下肢分化，在家完全替代健身房。适合家庭健身空间有限的用户。"
   },
   {
     "id": "glute_focus",
@@ -1584,7 +1648,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Lower A (Squat + Glutes)"
       },
       {
         "day": 2,
@@ -1620,11 +1685,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-12",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Upper Push (Balance)"
       },
       {
         "day": 3,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 4,
@@ -1660,7 +1727,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Lower B (Deadlift + Glutes)"
       },
       {
         "day": 5,
@@ -1696,17 +1764,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-15",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Upper Pull + Core"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "下肢主导，髋铰链+臀推为核心。每个下肢日都从臀部激活开始。适合臀部训练有需求的用户。"
   },
   {
     "id": "arnold_split",
@@ -1758,7 +1830,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-12",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Chest + Back A"
       },
       {
         "day": 2,
@@ -1800,7 +1873,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-12",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Shoulders + Arms A"
       },
       {
         "day": 3,
@@ -1842,7 +1916,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Legs A"
       },
       {
         "day": 4,
@@ -1878,7 +1953,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "8-15",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Chest + Back B"
       },
       {
         "day": 5,
@@ -1914,7 +1990,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-15",
             "note": "超级组"
           }
-        ]
+        ],
+        "focus_en": "Shoulders + Arms B"
       },
       {
         "day": 6,
@@ -1950,13 +2027,16 @@ var WORKOUT_TEMPLATES = [
             "reps": "45-60秒",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Legs B"
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "施瓦辛格经典：胸+背 / 肩+臂 / 腿，循环两次。拮抗肌超级组，效率极高。"
   },
   {
     "id": "kettlebell_3day",
@@ -2002,11 +2082,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "20",
             "note": "用壶铃"
           }
-        ]
+        ],
+        "focus_en": "Kettlebell A"
       },
       {
         "day": 2,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 3,
@@ -2042,11 +2124,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "20-25",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Kettlebell B"
       },
       {
         "day": 4,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 5,
@@ -2082,17 +2166,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "45-60秒",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Kettlebell C"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "只用一个壶铃。摇摆+高脚杯深蹲+土耳其起立为核心，极简高效。适合居家壶铃爱好者。"
   },
   {
     "id": "chest_specialization",
@@ -2138,7 +2226,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "12-15",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Chest A (Strength) + Shoulders"
       },
       {
         "day": 2,
@@ -2174,11 +2263,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "12-15",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Back + Rear Delts"
       },
       {
         "day": 3,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 4,
@@ -2214,7 +2305,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "12-15",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Chest B (Hypertrophy) + Triceps"
       },
       {
         "day": 5,
@@ -2244,17 +2336,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Lower Body"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "每周两次胸部训练，从不同角度刺激。适合想突破卧推重量或加强上胸的用户。"
   },
   {
     "id": "back_specialization",
@@ -2300,7 +2396,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "10-12",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Back A (Thickness) + Deadlift"
       },
       {
         "day": 2,
@@ -2330,11 +2427,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Chest + Shoulders"
       },
       {
         "day": 3,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 4,
@@ -2370,7 +2469,8 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": "收尾"
           }
-        ]
+        ],
+        "focus_en": "Back B (Width) + Rear Delts"
       },
       {
         "day": 5,
@@ -2400,17 +2500,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "15-20",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Lower Body"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "每周两次背部训练，宽度+厚度兼顾。适合想提升引体向上或突破硬拉的用户。"
   },
   {
     "id": "minimalist_2day",
@@ -2450,19 +2554,23 @@ var WORKOUT_TEMPLATES = [
             "reps": "5",
             "note": ""
           }
-        ]
+        ],
+        "focus_en": "Full Body Strength A"
       },
       {
         "day": 2,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 3,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 4,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 5,
@@ -2492,17 +2600,21 @@ var WORKOUT_TEMPLATES = [
             "reps": "5-8",
             "note": "负重"
           }
-        ]
+        ],
+        "focus_en": "Full Body Strength B"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "每周只练2次。每次高强度复合动作。适合忙到飞起但不想掉力量的老手维持。"
   },
   {
     "id": "hiit_conditioning",
@@ -2548,11 +2660,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "30-45秒",
             "note": "收尾"
           }
-        ]
+        ],
+        "focus_en": "Circuit A (Full Body)"
       },
       {
         "day": 2,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 3,
@@ -2588,11 +2702,13 @@ var WORKOUT_TEMPLATES = [
             "reps": "20",
             "note": "每侧"
           }
-        ]
+        ],
+        "focus_en": "Circuit B (Core + Conditioning)"
       },
       {
         "day": 4,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 5,
@@ -2610,16 +2726,20 @@ var WORKOUT_TEMPLATES = [
             "reps": "10",
             "note": "20秒做/10秒休 ×8"
           }
-        ]
+        ],
+        "focus_en": "Circuit C (Tabata Style)"
       },
       {
         "day": 6,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       },
       {
         "day": 7,
-        "rest": true
+        "rest": true,
+        "focus_en": ""
       }
-    ]
+    ],
+    "desc_en": "高强度间歇训练。动作间不休息或极短休息。适合减脂期、提升心肺、突破平台期。"
   }
 ];

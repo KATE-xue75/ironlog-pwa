@@ -83,19 +83,23 @@ const App = {
     templates.forEach((t, idx) => {
       const days = t.days || [];
       const diffMap = { '初级': 'beginner', '中级': 'intermediate', '高级': 'advanced', '中高级': 'intermediate' };
+      const diffMapEn = { '初级': 'Beginner', '中级': 'Intermediate', '高级': 'Advanced', '中高级': 'Intermediate' };
       const diffClass = diffMap[t.difficulty] || 'beginner';
+      const diffLabel = diffMapEn[t.difficulty] || t.difficulty || 'Beginner';
+      const tName = t.name_en || t.name || '';
+      const tDesc = t.desc_en || t.desc || '';
       html += `
         <div class="template-card">
           <div class="tc-header">
-            <span class="tc-badge ${diffClass}">${t.difficulty || 'Beginner'}</span>
+            <span class="tc-badge ${diffClass}">${diffLabel}</span>
             <span class="tc-days">${t.days_per_week || days.length}d/week</span>
           </div>
-          <h3>${t.name || ''}</h3>
-          <p class="tc-desc">${t.desc || ''}</p>
+          <h3>${tName}</h3>
+          <p class="tc-desc">${tDesc}</p>
           <div class="tc-days-list">
             ${days.map((d, di) => `
               <button class="btn btn-start" data-action="start-workout" data-template="${idx}" data-day="${di}">
-                Day ${di+1}: ${d.focus || d.name}
+                Day ${di+1}: ${d.focus_en || d.focus || ''}
               </button>
             `).join('')}
           </div>
@@ -146,9 +150,9 @@ const App = {
 
     this.state.activeWorkout = {
       templateId: t.id || String(templateIdx),
-      templateName: t.name || t.nameCN,
+      templateName: t.name_en || t.name || '',
       day: parseInt(dayIdx) + 1,
-      focus: day.focus || day.name,
+      focus: day.focus_en || day.focus || '',
       exercises
     };
     this.state.currentExerciseIdx = 0;
@@ -178,8 +182,8 @@ const App = {
       </div>
 
       <div class="exercise-card">
-        ${ex.gif ? `<img src="${ex.gif}" class="ex-gif" alt="${ex.nameCN}" loading="lazy">` : ''}
-        <h2 class="ex-name">${ex.nameCN}</h2>
+        ${ex.gif ? `<img src="${ex.gif}" class="ex-gif" alt="${ex.nameEN}" loading="lazy">` : ''}
+        <h2 class="ex-name">${ex.nameEN}</h2>
         <p class="ex-equip">${ex.equipment || ''} · Rest ${ex.restSeconds}s</p>
 
         <div class="sets-tracker">
@@ -327,7 +331,7 @@ const App = {
         <div class="result-exercises">
           ${workout.exercises.map(ex => `
             <div class="re-item">
-              <span class="re-name">${ex.nameCN}</span>
+              <span class="re-name">${ex.nameEN}</span>
               <span class="re-sets">${ex.sets_data.map(s => `${s.weight}×${s.reps}`).join(' · ')}</span>
             </div>
           `).join('')}
@@ -387,7 +391,7 @@ const App = {
       recent.exercises.forEach(ex => {
         const sets = ex.sets_data.map(s => `${s.weight}×${s.reps}`).join(' · ');
         ctx.fillStyle = '#ffffff';
-        ctx.fillText(ex.nameCN, 120, y);
+        ctx.fillText(ex.nameEN, 120, y);
         ctx.fillStyle = '#94a3b8';
         ctx.fillText(sets, 120, y + 40);
         y += 90;
