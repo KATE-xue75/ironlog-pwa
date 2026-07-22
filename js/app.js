@@ -67,48 +67,89 @@ const App = {
     const templates = typeof WORKOUT_TEMPLATES !== 'undefined' ? WORKOUT_TEMPLATES : [];
 
     let html = `
+      <div class="intro-banner">
+        <h2>Your workout companion</h2>
+        <div class="intro-steps">
+          <div class="intro-step"><span class="step-num">1</span> Pick a program</div>
+          <div class="intro-step"><span class="step-num">2</span> Log your sets</div>
+          <div class="intro-step"><span class="step-num">3</span> Track progress</div>
+        </div>
+      </div>
       <div class="home-header">
-        <h1>IronLog</h1>
+        <span class="logo">IronLog</span>
         <p class="tagline">No login. No ads. Just lift.</p>
       </div>
       <div class="stats-bar">
         <div class="stat"><span class="stat-val">${stats.totalWorkouts}</span><span class="stat-label">Workouts</span></div>
-        <div class="stat"><span class="stat-val">🔥 ${stats.streak}d</span><span class="stat-label">Streak</span></div>
+        <div class="stat"><span class="stat-val">${stats.streak}d</span><span class="stat-label">Streak</span></div>
         <div class="stat"><span class="stat-val">${(stats.totalVolume/1000).toFixed(1)}t</span><span class="stat-label">Volume</span></div>
       </div>
-      <div class="section-title">Training Programs</div>
-      <div class="template-grid">
     `;
 
+    // Group templates by difficulty
+    const diffMap = { '初级': 'beginner', '中级': 'intermediate', '高级': 'advanced', '中高级': 'intermediate' };
+    const diffMapEn = { '初级': 'Beginner', '中级': 'Intermediate', '高级': 'Advanced', '中高级': 'Intermediate' };
+    const diffOrder = { 'beginner': 0, 'intermediate': 1, 'advanced': 2 };
+    const diffIcons = { 'beginner': '🌱', 'intermediate': '🔥', 'advanced': '💀' };
+
+    const groups = { beginner: [], intermediate: [], advanced: [] };
+
     templates.forEach((t, idx) => {
-      const days = t.days || [];
-      const diffMap = { '初级': 'beginner', '中级': 'intermediate', '高级': 'advanced', '中高级': 'intermediate' };
-      const diffMapEn = { '初级': 'Beginner', '中级': 'Intermediate', '高级': 'Advanced', '中高级': 'Intermediate' };
       const diffClass = diffMap[t.difficulty] || 'beginner';
       const diffLabel = diffMapEn[t.difficulty] || t.difficulty || 'Beginner';
       const tName = t.name_en || t.name || '';
       const tDesc = t.desc_en || t.desc || '';
-      html += `
-        <div class="template-card">
-          <div class="tc-header">
-            <span class="tc-badge ${diffClass}">${diffLabel}</span>
-            <span class="tc-days">${t.days_per_week || days.length}d/week</span>
-          </div>
-          <h3>${tName}</h3>
-          <p class="tc-desc">${tDesc}</p>
-          <div class="tc-days-list">
-            ${days.map((d, di) => `
-              <button class="btn btn-start" data-action="start-workout" data-template="${idx}" data-day="${di}">
-                Day ${di+1}: ${d.focus_en || d.focus || ''}
-              </button>
-            `).join('')}
-          </div>
-        </div>
-      `;
+      const days = t.days || [];
+      const source = t.source || '';
+
+      groups[diffClass].push({ idx, t, diffClass, diffLabel, tName, tDesc, days, source });
     });
 
-    html += `</div>
-      <div class="bottom-nav">
+    const groupNames = [
+      { key: 'beginner', label: 'Beginner', icon: '🌱' },
+      { key: 'intermediate', label: 'Intermediate', icon: '🔥' },
+      { key: 'advanced', label: 'Advanced', icon: '💀' }
+    ];
+
+    groupNames.forEach(g => {
+      const items = groups[g.key];
+      if (!items.length) return;
+
+      html += `<div class="diff-group">
+        <div class="diff-label ${g.key}">${g.icon} ${g.label}</div>
+        <div class="template-grid">`;
+
+      items.forEach(item => {
+        const { idx, t, diffClass, diffLabel, tName, tDesc, days, source } = item;
+        const dPerWeek = t.days_per_week || days.length;
+        const restDayCount = days.filter(d => d.rest).length;
+
+        html += `
+          <div class="template-card ${diffClass}">
+            <div class="tc-header">
+              <span class="tc-badge ${diffClass}">${diffLabel}</span>
+              <span class="tc-source">${source}</span>
+            </div>
+            <h3>${tName}</h3>
+            <p class="tc-desc">${tDesc}</p>
+            <div class="tc-meta">
+              <span>📅 ${dPerWeek - restDayCount} training days</span>
+              <span>😴 ${restDayCount > 0 ? restDayCount + ' rest' : ''}</span>
+            </div>
+            <div class="tc-days-list">
+              ${days.map((d, di) => `
+                <button class="btn btn-start" data-action="start-workout" data-template="${idx}" data-day="${di}">
+                  ${d.rest ? '😴' : '🏋️'} Day ${di+1}: ${d.focus_en || d.focus || ''}
+                </button>
+              `).join('')}
+            </div>
+          </div>`;
+      });
+
+      html += `</div></div>`;
+    });
+
+    html += `<div class="bottom-nav">
         <button class="nav-btn active" data-action="back-home">🏠 Home</button>
         <button class="nav-btn" onclick="App.exportCSV()">📊 Export</button>
         <button class="nav-btn" onclick="App.shareCard()">🃏 Share</button>
