@@ -1,5 +1,5 @@
-/* IronLog PWA — Bright Fitness UI */
-/* Inspired by Strava / Nike Training Club */
+/* IronLog PWA — Gradient Fitness UI */
+/* Gradient: #051937 → #004d7a → #008793 → #00bf72 → #a8eb12 */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
@@ -13,17 +13,19 @@
   --text-secondary: #5c5a56;
   --text-tertiary: #8c8984;
   --text-quaternary: #b5b2ad;
-  --accent: #ff6b4a;
-  --accent-dark: #e85d3a;
-  --accent-light: #ff8f73;
-  --accent-glow: rgba(255,107,74,0.12);
-  --teal: #00a896;
-  --teal-dark: #008a7a;
-  --teal-bg: rgba(0,168,150,0.08);
+  --accent: #008793;
+  --accent-dark: #006d78;
+  --accent-light: #00a3b0;
+  --accent-glow: rgba(0,135,147,0.12);
+  --green: #00bf72;
+  --green-dark: #009a5c;
+  --green-bg: rgba(0,191,114,0.1);
   --amber: #f59e0b;
   --amber-bg: rgba(245,158,11,0.08);
-  --purple: #7c5ce7;
-  --purple-bg: rgba(124,92,231,0.08);
+  --lime: #a8eb12;
+  --lime-bg: rgba(168,235,18,0.1);
+  --purple: #051937;
+  --purple-bg: rgba(5,25,55,0.06);
   --border-subtle: rgba(0,0,0,0.06);
   --border-standard: rgba(0,0,0,0.1);
   --border-strong: rgba(0,0,0,0.15);
@@ -48,17 +50,27 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--bg-page);
+  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-attachment: fixed;
   color: var(--text-primary);
   min-height:100vh; min-height:100dvh;
   -webkit-font-smoothing:antialiased;
   letter-spacing: -0.01em;
   line-height: 1.5;
+  position: relative;
+}
+/* Soften gradient with a white overlay for readability */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.92);
+  z-index: -1;
 }
 
 /* ===== INTRO BANNER ===== */
 .intro-banner {
-  background: linear-gradient(135deg, var(--accent-glow) 0%, var(--teal-bg) 100%);
+  background: linear-gradient(to right top, rgba(5,25,55,0.06), rgba(0,135,147,0.08), rgba(0,191,114,0.06));
   padding: 24px;
   text-align: center;
   border-bottom: 1px solid var(--border-subtle);
@@ -87,7 +99,7 @@ body {
 .intro-step .step-num {
   width: 26px; height: 26px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  background: linear-gradient(135deg, var(--accent), var(--green));
   color: #fff;
   display: flex;
   align-items: center;
@@ -95,7 +107,7 @@ body {
   font-size: 0.75rem;
   font-weight: 700;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(255,107,74,0.3);
+  box-shadow: 0 2px 8px rgba(0,135,147,0.3);
 }
 
 /* ===== HOME HEADER ===== */
@@ -107,7 +119,7 @@ body {
   font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: -0.04em;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--green) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -140,7 +152,7 @@ body {
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  background: linear-gradient(135deg, var(--accent), var(--green));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -179,7 +191,7 @@ body {
   border-radius: 50%;
   background: currentColor;
 }
-.diff-label.beginner { color: var(--teal); }
+.diff-label.beginner { color: var(--green); }
 .diff-label.intermediate { color: var(--amber); }
 .diff-label.advanced { color: var(--accent); }
 
@@ -207,7 +219,7 @@ body {
   border-radius: 0 2px 2px 0;
   transition: all var(--transition-smooth);
 }
-.template-card.beginner::before { background: var(--teal); }
+.template-card.beginner::before { background: var(--green); }
 .template-card.intermediate::before { background: var(--amber); }
 .template-card.advanced::before { background: var(--accent); }
 .template-card:active {
@@ -237,8 +249,8 @@ body {
   letter-spacing: 0.04em;
 }
 .tc-badge.beginner {
-  background: var(--teal-bg);
-  color: var(--teal);
+  background: var(--green-bg);
+  color: var(--green-dark);
 }
 .tc-badge.intermediate {
   background: var(--amber-bg);
@@ -246,7 +258,7 @@ body {
 }
 .tc-badge.advanced {
   background: var(--accent-glow);
-  color: var(--accent);
+  color: var(--accent-dark);
 }
 .tc-source {
   font-size: 0.7rem;
@@ -310,13 +322,13 @@ body {
   transform: scale(0.98);
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  background: linear-gradient(135deg, var(--accent), var(--green));
   color: #fff;
   border-color: transparent;
-  box-shadow: 0 2px 12px rgba(255,107,74,0.3);
+  box-shadow: 0 2px 12px rgba(0,135,147,0.3);
 }
 .btn-primary:active {
-  box-shadow: 0 1px 6px rgba(255,107,74,0.4);
+  box-shadow: 0 1px 6px rgba(0,135,147,0.4);
 }
 .btn-start {
   padding: 10px 14px;
@@ -331,7 +343,7 @@ body {
 }
 .btn-start:active {
   background: var(--accent-glow);
-  border-color: var(--accent-light);
+  border-color: var(--accent);
   color: var(--accent);
 }
 .btn-giant {
@@ -341,10 +353,10 @@ body {
   letter-spacing: -0.02em;
 }
 .btn-finish {
-  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
   color: #fff;
   border-color: transparent;
-  box-shadow: 0 2px 12px rgba(0,168,150,0.3);
+  box-shadow: 0 2px 12px rgba(0,191,114,0.3);
 }
 .btn-sm {
   padding: 8px 12px;
@@ -498,9 +510,9 @@ body {
   transition: all var(--transition-smooth);
 }
 .set-dot.done {
-  background: var(--teal-bg);
-  color: var(--teal);
-  border-color: var(--teal);
+  background: var(--green-bg);
+  color: var(--green-dark);
+  border-color: var(--green);
 }
 .set-dot.current {
   background: var(--accent-glow);
@@ -561,7 +573,7 @@ body {
 .set-complete {
   text-align: center;
   padding: 20px;
-  color: var(--teal);
+  color: var(--green);
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -571,7 +583,7 @@ body {
 .rest-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(250,249,247,0.97);
+  background: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   display: flex;
@@ -594,7 +606,7 @@ body {
   font-size: 6rem;
   font-weight: 900;
   letter-spacing: -0.06em;
-  background: linear-gradient(135deg, var(--accent), var(--teal));
+  background: linear-gradient(135deg, var(--accent), var(--green), var(--lime));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -615,8 +627,8 @@ body {
   display: inline-block;
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--teal);
-  background: var(--teal-bg);
+  color: var(--green-dark);
+  background: var(--green-bg);
   padding: 5px 16px;
   border-radius: 20px;
   margin-bottom: 14px;
@@ -649,7 +661,7 @@ body {
   font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.04em;
-  background: linear-gradient(135deg, var(--accent), var(--teal));
+  background: linear-gradient(135deg, var(--accent), var(--green));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
