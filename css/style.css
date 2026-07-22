@@ -70,17 +70,18 @@ body::before {
 
 /* ===== INTRO BANNER ===== */
 .intro-banner {
-  background: linear-gradient(to right top, rgba(5,25,55,0.06), rgba(0,135,147,0.08), rgba(0,191,114,0.06));
-  padding: 24px;
+  background: linear-gradient(135deg, rgba(0,135,147,0.15) 0%, rgba(0,191,114,0.12) 50%, rgba(168,235,18,0.08) 100%);
+  padding: 28px 24px;
   text-align: center;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 2px solid rgba(0,135,147,0.2);
+  margin: 0;
 }
 .intro-banner h2 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
-  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #051937;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
 }
 .intro-steps {
   display: flex;
