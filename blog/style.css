@@ -1,0 +1,153 @@
+/* IronLog Blog — Shared Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #f8fafb;
+  --surface:   #ffffff;
+  --text:      #1e293b;
+  --text-muted:#64748b;
+  --accent:    #f25f4c;
+  --accent-hv: #e04e3b;
+  --border:    #e2e8f0;
+  --radius:    10px;
+  --max-w:     720px;
+}
+
+html { font-size: 17px; scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout ── */
+.blog-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1.4rem 1.5rem;
+  text-align: center;
+}
+.blog-header a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: -0.5px;
+}
+.blog-header a span { color: var(--accent); }
+
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ── Typography ── */
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+}
+h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 2rem 0 0.6rem;
+  color: #1e293b;
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+p { margin-bottom: 1.1rem; color: #334155; }
+strong { color: #0f172a; }
+
+.meta {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ── Lists ── */
+ul, ol { margin: 0.5rem 0 1.2rem 1.4rem; }
+li { margin-bottom: 0.45rem; color: #334155; }
+
+/* ── Pros / Cons cards ── */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0 1.8rem;
+}
+.compare-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.3rem;
+}
+.compare-card h3 { margin-top: 0; font-size: 1rem; }
+.compare-card.good h3 { color: #16a34a; }
+.compare-card.bad  h3 { color: #dc2626; }
+.compare-card ul { margin-bottom: 0; }
+
+/* ── Highlight box ── */
+.highlight-box {
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.2rem 1.4rem;
+  margin: 1.8rem 0;
+}
+.highlight-box p { margin-bottom: 0; }
+
+/* ── CTA ── */
+.cta-section {
+  margin-top: 3rem;
+  padding: 2rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.cta-section h2 { margin-top: 0; font-size: 1.3rem; }
+.cta-section p  { margin-bottom: 1.2rem; color: var(--text-muted); }
+.cta-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.cta-btn:hover { background: var(--accent-hv); }
+
+/* ── Footer ── */
+.blog-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+.blog-footer a { color: var(--accent); text-decoration: none; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  h1 { font-size: 1.55rem; }
+  .compare-grid { grid-template-columns: 1fr; }
+  main { padding: 1.8rem 1rem 3rem; }
+}
