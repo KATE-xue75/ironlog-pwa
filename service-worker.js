@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ironlog-v1';
+const CACHE_NAME = 'ironlog-v3';
 
 const STATIC_ASSETS = [
   '/',
@@ -6,8 +6,6 @@ const STATIC_ASSETS = [
   '/css/style.css',
   '/js/app.js',
   '/js/storage.js',
-  '/js/card.js',
-  '/js/templates.js',
   '/data/exercises.js',
   '/data/templates.js',
   '/manifest.json'
