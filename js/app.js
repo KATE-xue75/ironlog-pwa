@@ -1,14 +1,14 @@
 // IronLog PWA - Main App
-(function() {
-  // Force fresh version - remove any stale SW cache
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(regs => {
-      regs.forEach(r => r.unregister());
-    }).then(() => {
-      caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
-    });
-  }
-})();
+try {
+  (function() {
+    if ('serviceWorker' in navigator && 'caches' in window) {
+      navigator.serviceWorker.getRegistrations().then(function(regs) {
+        regs.forEach(function(r) { r.unregister(); });
+        caches.keys().then(function(keys) { keys.forEach(function(k) { caches.delete(k); }); });
+      }).catch(function(){});
+    }
+  })();
+} catch(e) { /* ignore */ }
 
 const App = {
   state: {
