@@ -679,7 +679,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "每次训练覆盖全身。适合新手入门、恢复期训练、或时间紧张的老手维持。效率最高。"
+    "desc_en": "Full-body workout 3x/week. Beginner-friendly and time-efficient — the smartest path to getting strong."
   },
   {
     "id": "bro_split_5day",
@@ -1252,7 +1252,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "最简练的基础课表。只做最核心的复合动作，每次训练45分钟。适合零基础新手建立力量根基。"
+    "desc_en": "Minimalist beginner program. Only the most essential compound lifts, 45 minutes per session. Build your strength foundation."
   },
   {
     "id": "bodyweight_anytime",
@@ -1420,7 +1420,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "0器械，在家就能练。适合出差、居家、或不想去健身房的日子。全身循环，燃脂+塑形。"
+    "desc_en": "Zero equipment, anywhere. Calisthenics circuits and bodyweight progressions. Perfect for travel, home, or lazy days."
   },
   {
     "id": "dumbbell_home",
@@ -1602,7 +1602,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "只需一对可调哑铃。上下肢分化，在家完全替代健身房。适合家庭健身空间有限的用户。"
+    "desc_en": "All you need is a pair of adjustable dumbbells. Upper/lower split, full gym replacement for home workouts."
   },
   {
     "id": "glute_focus",
@@ -1778,7 +1778,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "下肢主导，髋铰链+臀推为核心。每个下肢日都从臀部激活开始。适合臀部训练有需求的用户。"
+    "desc_en": "Lower-body dominant split built around hip hinges and glute bridges. Every leg day starts with glute activation."
   },
   {
     "id": "arnold_split",
@@ -2036,7 +2036,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "施瓦辛格经典：胸+背 / 肩+臂 / 腿，循环两次。拮抗肌超级组，效率极高。"
+    "desc_en": "The Austrian Oak's classic: Chest+Back / Shoulders+Arms / Legs, twice per cycle. Antagonist supersets for maximum efficiency."
   },
   {
     "id": "kettlebell_3day",
@@ -2180,7 +2180,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "只用一个壶铃。摇摆+高脚杯深蹲+土耳其起立为核心，极简高效。适合居家壶铃爱好者。"
+    "desc_en": "Just one kettlebell. Swings, goblet squats, and Turkish get-ups form the core. Minimalist and effective."
   },
   {
     "id": "chest_specialization",
@@ -2350,7 +2350,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "每周两次胸部训练，从不同角度刺激。适合想突破卧推重量或加强上胸的用户。"
+    "desc_en": "Chest twice a week from every angle. For those looking to break through bench plateaus or build a bigger upper chest."
   },
   {
     "id": "back_specialization",
@@ -2514,7 +2514,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "每周两次背部训练，宽度+厚度兼顾。适合想提升引体向上或突破硬拉的用户。"
+    "desc_en": "Back twice a week — width AND thickness. For those chasing higher pull-up numbers or a bigger deadlift."
   },
   {
     "id": "minimalist_2day",
@@ -2614,7 +2614,7 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "每周只练2次。每次高强度复合动作。适合忙到飞起但不想掉力量的老手维持。"
+    "desc_en": "Only 2 sessions per week. High-intensity compound lifts. For experienced lifters who are slammed but refuse to lose strength."
   },
   {
     "id": "hiit_conditioning",
@@ -2740,6 +2740,6 @@ var WORKOUT_TEMPLATES = [
         "focus_en": ""
       }
     ],
-    "desc_en": "高强度间歇训练。动作间不休息或极短休息。适合减脂期、提升心肺、突破平台期。"
+    "desc_en": "High-intensity conditioning circuits. Tabata, HIIT, and metabolic finishers. For those who want to suffer."
   }
 ];
