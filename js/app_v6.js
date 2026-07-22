@@ -151,7 +151,7 @@ const App = {
     // Empty state for new users
     if (!hasWorkouts) {
       html += `<div class="empty-state">
-        <span class="empty-icon">🏋️</span>
+        <span class="empty-icon">🚀</span>
         <h3>Start your first workout</h3>
         <p>Pick a program below, tap a day, and log your sets. It takes 30 seconds.</p>
       </div>`;
