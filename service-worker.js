@@ -28,7 +28,18 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-  // Network-first for exercise GIFs (they're large, cache on access)
+  // Network-first for our own assets (always get latest)
+  if (e.request.url.includes(self.location.origin)) {
+    e.respondWith(
+      fetch(e.request).then(resp => {
+        const clone = resp.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
+        return resp;
+      }).catch(() => caches.match(e.request))
+    );
+    return;
+  }
+  // Cache-first for external GIFs
   if (e.request.url.includes('exercisedb.dev') || e.request.url.includes('gif')) {
     e.respondWith(
       caches.match(e.request).then(cached =>
@@ -41,14 +52,8 @@ self.addEventListener('fetch', e => {
     );
     return;
   }
-  // Stale-while-revalidate for everything else
+  // Default: network-first
   e.respondWith(
-    caches.match(e.request).then(cached => {
-      const fetchPromise = fetch(e.request).then(resp => {
-        caches.open(CACHE_NAME).then(cache => cache.put(e.request, resp.clone()));
-        return resp;
-      });
-      return cached || fetchPromise;
-    })
+    fetch(e.request).catch(() => caches.match(e.request))
   );
 });
