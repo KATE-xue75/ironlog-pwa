@@ -145,7 +145,7 @@ const App = {
     html += `<div class="stats-bar">
         <div class="stat"><span class="stat-val${hasWorkouts ? ' accent' : ''}">${stats.totalWorkouts}</span><span class="stat-label">Workouts</span></div>
         <div class="stat"><span class="stat-val${stats.streak > 0 ? ' accent' : ''}">${stats.streak}d</span><span class="stat-label">Streak</span></div>
-        <div class="stat"><span class="stat-val${stats.totalVolume > 0 ? ' accent' : ''}">${(stats.totalVolume/1000).toFixed(1)}t</span><span class="stat-label">Volume</span></div>
+        <div class="stat"><span class="stat-val${stats.totalSets > 0 ? ' accent' : ''}">${stats.totalSets}</span><span class="stat-label">Sets</span></div>
       </div>`;
 
     // Empty state for new users
@@ -391,7 +391,6 @@ const App = {
   // ============ RESULT ============
   renderResult(workout) {
     this.state.screen = 'result';
-    const volume = (workout.volume / 1000).toFixed(1);
     const today = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
     document.getElementById('app').innerHTML = `
@@ -400,7 +399,6 @@ const App = {
         <h1 class="result-title">${workout.templateName}</h1>
         <p class="result-meta">Day ${workout.day} · ${workout.focus} · ${today}</p>
         <div class="result-stats">
-          <div class="rstat"><span class="rval">${volume}t</span><span class="rlab">Volume</span></div>
           <div class="rstat"><span class="rval">${workout.sets}</span><span class="rlab">Sets</span></div>
           <div class="rstat"><span class="rval">${workout.exercises.length}</span><span class="rlab">Exercises</span></div>
         </div>
@@ -442,9 +440,9 @@ const App = {
     if (recent) {
       ctx.fillStyle = '#f25f4c';
       ctx.font = 'bold 130px Inter, -apple-system, sans-serif';
-      ctx.fillText((recent.volume/1000).toFixed(1) + 't', 540, 400);
+      ctx.fillText(recent.sets, 540, 400);
       ctx.fillStyle = '#6b7d8e'; ctx.font = '34px Inter, -apple-system, sans-serif';
-      ctx.fillText('TOTAL VOLUME', 540, 450);
+      ctx.fillText('TOTAL SETS', 540, 450);
 
       ctx.textAlign = 'left'; ctx.font = '28px Inter, -apple-system, sans-serif';
       let y = 600;
@@ -460,7 +458,7 @@ const App = {
     [
       { val: stats.totalWorkouts, label: 'WORKOUTS' },
       { val: stats.streak + 'd', label: 'STREAK' },
-      { val: (stats.totalVolume/1000).toFixed(0) + 't', label: 'ALL-TIME' }
+      { val: stats.totalSets, label: 'ALL-TIME SETS' }
     ].forEach(s => {
       ctx.fillStyle = '#f1f4f6'; ctx.fillRect(bx - 120, 1100, 240, 120);
       ctx.fillStyle = '#0f1a2c'; ctx.font = 'bold 44px Inter, -apple-system, sans-serif';
