@@ -1,0 +1,10 @@
+/*
+  Cache-Control: public, max-age=3600
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+
+/service-worker.js
+  Cache-Control: public, max-age=0
+
+/data/*
+  Cache-Control: public, max-age=86400
