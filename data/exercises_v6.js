@@ -210,7 +210,10 @@ var EXERCISES = [
     "role": "accessory",
     "default_sets": "3-4",
     "default_reps": "8-12",
-    "rest_seconds": 90
+    "rest_seconds": 90,
+    "warning_en": "⚠️ Can't do 3 clean reps? Regress: Wall → Incline → Knee → Standard. No shame in regression — shame in injury.",
+    "warning_cn": "⚠️ 做不动？退阶：墙壁俯卧撑→斜角→跪姿→标准。退阶不丢人，受伤才丢人。",
+    "regression": "wall_pushups"
   },
   {
     "tag": "chest_07",
@@ -242,7 +245,10 @@ var EXERCISES = [
     "role": "accessory",
     "default_sets": "3-4",
     "default_reps": "8-12",
-    "rest_seconds": 90
+    "rest_seconds": 90,
+    "warning_en": "⚠️ Depress your scapula! Keep elbows tucked, not flaring. Shoulder pain? Regress to Bench Dips.",
+    "warning_cn": "⚠️ 肩胛骨下沉！手肘内收勿外展。肩膀疼？退阶到长凳臂屈伸。",
+    "regression": "bench_dips"
   },
   {
     "tag": "chest_08",

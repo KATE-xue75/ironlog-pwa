@@ -2741,5 +2741,491 @@ var WORKOUT_TEMPLATES = [
       }
     ],
     "desc_en": "High-intensity conditioning circuits. Tabata, HIIT, and metabolic finishers. For those who want to suffer."
+  },
+  {
+    "id": "reddit_rr",
+    "name": "Reddit RR 黄金课表",
+    "name_en": "Reddit Recommended Routine (RR)",
+    "desc": "r/bodyweightfitness 340万会员公认的黄金自重圣经。3x/周全身训练，动作成对交替（Paired Sets），90秒组间休息。从热身到核心全覆盖。",
+    "desc_en": "The gold standard from r/bodyweightfitness (3.4M members). 3x/week full body, paired sets with 90s rest. Complete from warm-up to core.",
+    "difficulty": "初级",
+    "days_per_week": 3,
+    "source": "r/bodyweightfitness Official RR",
+    "color": "#ff6b6b",
+    "days": [
+      {
+        "day": 1,
+        "focus": "全身 RR（周一）",
+        "focus_en": "Full Body RR (Mon)",
+        "exercises": [
+          {
+            "tag": "chest_06",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅰️ Pair 1: 做不动→退阶斜角/跪姿"
+          },
+          {
+            "tag": "legs_01",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅰️ 休息90s再换"
+          },
+          {
+            "tag": "back_01",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅱️ Pair 2: 引体→弹力带辅助"
+          },
+          {
+            "tag": "chest_07",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅱️ ⚠️肩胛骨下沉 手肘勿外展"
+          },
+          {
+            "tag": "legs_12",
+            "sets": "3",
+            "reps": "8-12",
+            "note": "🅲 Pair 3: 臀桥"
+          },
+          {
+            "tag": "back_10",
+            "sets": "3",
+            "reps": "8-12",
+            "note": "🅲 山羊挺身"
+          },
+          {
+            "tag": "core_01",
+            "sets": "3",
+            "reps": "30-60秒",
+            "note": "Core: 平板支撑"
+          },
+          {
+            "tag": "core_04",
+            "sets": "3",
+            "reps": "20",
+            "note": "俄罗斯转体（每侧）"
+          },
+          {
+            "tag": "core_02",
+            "sets": "3",
+            "reps": "15-20",
+            "note": "卷腹"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "rest": true,
+        "focus_en": ""
+      },
+      {
+        "day": 3,
+        "focus": "全身 RR（周三）",
+        "focus_en": "Full Body RR (Wed)",
+        "exercises": [
+          {
+            "tag": "chest_06",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅰️ 退阶：墙壁→斜角→跪姿→标准"
+          },
+          {
+            "tag": "legs_01",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅰️ 深蹲"
+          },
+          {
+            "tag": "back_01",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅱️ 引体向上"
+          },
+          {
+            "tag": "chest_07",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅱️ ⚠️手肘勿外展"
+          },
+          {
+            "tag": "legs_12",
+            "sets": "3",
+            "reps": "8-12",
+            "note": "🅲 臀桥"
+          },
+          {
+            "tag": "back_10",
+            "sets": "3",
+            "reps": "8-12",
+            "note": "🅲 山羊挺身"
+          },
+          {
+            "tag": "core_01",
+            "sets": "3",
+            "reps": "40-60秒",
+            "note": "平板支撑"
+          },
+          {
+            "tag": "core_04",
+            "sets": "3",
+            "reps": "20",
+            "note": "俄罗斯转体"
+          },
+          {
+            "tag": "core_02",
+            "sets": "3",
+            "reps": "15-20",
+            "note": "卷腹"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "rest": true,
+        "focus_en": ""
+      },
+      {
+        "day": 5,
+        "focus": "全身 RR（周五）",
+        "focus_en": "Full Body RR (Fri)",
+        "exercises": [
+          {
+            "tag": "arms_09",
+            "sets": "3",
+            "reps": "8-15",
+            "note": "🅰️ 窄距俯卧撑"
+          },
+          {
+            "tag": "legs_04",
+            "sets": "3",
+            "reps": "8-12",
+            "note": "🅰️ 弓步蹲（每侧）"
+          },
+          {
+            "tag": "back_01",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅱️ 引体向上"
+          },
+          {
+            "tag": "chest_07",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "🅱️ ⚠️退阶→Bench Dips"
+          },
+          {
+            "tag": "legs_12",
+            "sets": "3",
+            "reps": "10-15",
+            "note": "🅲 臀桥行进"
+          },
+          {
+            "tag": "back_10",
+            "sets": "3",
+            "reps": "10-12",
+            "note": "🅲 山羊挺身"
+          },
+          {
+            "tag": "core_01",
+            "sets": "3",
+            "reps": "45-60秒",
+            "note": "平板支撑"
+          },
+          {
+            "tag": "core_03",
+            "sets": "3",
+            "reps": "12-15",
+            "note": "坐姿举腿"
+          },
+          {
+            "tag": "core_04",
+            "sets": "3",
+            "reps": "20",
+            "note": "俄罗斯转体"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "rest": true,
+        "focus_en": ""
+      },
+      {
+        "day": 7,
+        "rest": true,
+        "focus_en": ""
+      }
+    ]
+  },
+  {
+    "id": "bwsf",
+    "name": "BWSF 零基础自重",
+    "name_en": "Bodyweight Strength Foundation (BWSF)",
+    "desc": "r/bodyweightfitness 官方零基础课表。动作更安全、强度更低，专为大体重/久坐/完全零基础的初学者设计。退阶路线清晰。",
+    "desc_en": "Official beginner program from r/bodyweightfitness. Lower intensity, safer movements for absolute beginners and larger bodies.",
+    "difficulty": "初级",
+    "days_per_week": 3,
+    "source": "r/bodyweightfitness BWSF (formerly Primer/MOVE)",
+    "color": "#74b9ff",
+    "days": [
+      {
+        "day": 1,
+        "focus": "基础入门 A",
+        "focus_en": "Foundation A",
+        "exercises": [
+          {
+            "tag": "chest_06",
+            "sets": "3",
+            "reps": "5-10",
+            "note": "退阶：墙壁→斜角→跪姿→标准"
+          },
+          {
+            "tag": "core_01",
+            "sets": "3",
+            "reps": "15-30秒",
+            "note": "平板支撑（可跪姿）"
+          },
+          {
+            "tag": "legs_12",
+            "sets": "3",
+            "reps": "10-15",
+            "note": "臀桥"
+          },
+          {
+            "tag": "core_02",
+            "sets": "2",
+            "reps": "8-12",
+            "note": "卷腹"
+          },
+          {
+            "tag": "legs_10",
+            "sets": "2",
+            "reps": "6-10",
+            "note": "辅助分腿蹲（扶椅子）"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "rest": true,
+        "focus_en": ""
+      },
+      {
+        "day": 3,
+        "focus": "基础入门 B",
+        "focus_en": "Foundation B",
+        "exercises": [
+          {
+            "tag": "chest_06",
+            "sets": "3",
+            "reps": "5-10",
+            "note": "选当前能做的退阶"
+          },
+          {
+            "tag": "core_01",
+            "sets": "3",
+            "reps": "20-30秒",
+            "note": "平板支撑"
+          },
+          {
+            "tag": "legs_12",
+            "sets": "3",
+            "reps": "12-15",
+            "note": "臀桥"
+          },
+          {
+            "tag": "core_03",
+            "sets": "2",
+            "reps": "8-10",
+            "note": "坐姿举腿"
+          },
+          {
+            "tag": "legs_04",
+            "sets": "2",
+            "reps": "6-8",
+            "note": "弓步蹲（每侧，辅助）"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "rest": true,
+        "focus_en": ""
+      },
+      {
+        "day": 5,
+        "focus": "基础入门 C",
+        "focus_en": "Foundation C",
+        "exercises": [
+          {
+            "tag": "chest_06",
+            "sets": "3",
+            "reps": "6-12",
+            "note": "尝试进阶一阶"
+          },
+          {
+            "tag": "core_01",
+            "sets": "3",
+            "reps": "25-35秒",
+            "note": "平板支撑"
+          },
+          {
+            "tag": "legs_12",
+            "sets": "3",
+            "reps": "15-20",
+            "note": "臀桥行进"
+          },
+          {
+            "tag": "core_04",
+            "sets": "2",
+            "reps": "12-15",
+            "note": "俄罗斯转体（每侧）"
+          },
+          {
+            "tag": "legs_10",
+            "sets": "2",
+            "reps": "8-10",
+            "note": "分腿蹲"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "rest": true,
+        "focus_en": ""
+      },
+      {
+        "day": 7,
+        "rest": true,
+        "focus_en": ""
+      }
+    ]
+  },
+  {
+    "id": "minimalist",
+    "name": "30分钟极简自重",
+    "name_en": "Minimalist Routine (20-30min)",
+    "desc": "r/bodyweightfitness 官方极简课表。只做最核心的推拉蹲+核心，20-30分钟高效完成。适合极度缺时间的社畜。",
+    "desc_en": "Official minimalist routine from r/bodyweightfitness. Just push-pull-squat + core. 20-30 min. For the time-crunched.",
+    "difficulty": "初级",
+    "days_per_week": 3,
+    "source": "r/bodyweightfitness Minimalist Routine",
+    "color": "#a29bfe",
+    "days": [
+      {
+        "day": 1,
+        "focus": "极简（周一）",
+        "focus_en": "Minimalist (Mon)",
+        "exercises": [
+          {
+            "tag": "chest_06",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "推"
+          },
+          {
+            "tag": "back_01",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "拉"
+          },
+          {
+            "tag": "legs_01",
+            "sets": "3",
+            "reps": "8-12",
+            "note": "蹲"
+          },
+          {
+            "tag": "core_01",
+            "sets": "2",
+            "reps": "30-60秒",
+            "note": "核心"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "rest": true,
+        "focus_en": ""
+      },
+      {
+        "day": 3,
+        "focus": "极简（周三）",
+        "focus_en": "Minimalist (Wed)",
+        "exercises": [
+          {
+            "tag": "chest_06",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "推"
+          },
+          {
+            "tag": "back_01",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "拉"
+          },
+          {
+            "tag": "legs_04",
+            "sets": "3",
+            "reps": "8-12",
+            "note": "蹲：弓步"
+          },
+          {
+            "tag": "core_04",
+            "sets": "2",
+            "reps": "15-20",
+            "note": "核心"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "rest": true,
+        "focus_en": ""
+      },
+      {
+        "day": 5,
+        "focus": "极简（周五）",
+        "focus_en": "Minimalist (Fri)",
+        "exercises": [
+          {
+            "tag": "arms_09",
+            "sets": "3",
+            "reps": "8-15",
+            "note": "推：窄距"
+          },
+          {
+            "tag": "back_01",
+            "sets": "3",
+            "reps": "5-8",
+            "note": "拉"
+          },
+          {
+            "tag": "legs_10",
+            "sets": "3",
+            "reps": "8-12",
+            "note": "蹲：分腿蹲"
+          },
+          {
+            "tag": "core_03",
+            "sets": "2",
+            "reps": "10-15",
+            "note": "核心"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "rest": true,
+        "focus_en": ""
+      },
+      {
+        "day": 7,
+        "rest": true,
+        "focus_en": ""
+      }
+    ]
   }
 ];
