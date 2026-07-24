@@ -6,8 +6,8 @@ function getAllTemplates() {
   var all = typeof WORKOUT_TEMPLATES !== 'undefined' ? WORKOUT_TEMPLATES.slice() : [];
   var premiumSources = [
     { v: typeof BODYWEIGHT_MASTERY_TEMPLATES !== 'undefined' ? BODYWEIGHT_MASTERY_TEMPLATES : null, url: 'https://howlwind7126.gumroad.com/l/bzwxpz' },
-    { v: typeof DESK_WARRIOR_TEMPLATES !== 'undefined' ? DESK_WARRIOR_TEMPLATES : null, url: 'https://howlwind7126.gumroad.com/l/desk-warrior' },
-    { v: typeof TRAVEL_FIT_TEMPLATES !== 'undefined' ? TRAVEL_FIT_TEMPLATES : null, url: 'https://howlwind7126.gumroad.com/l/travel-fit' }
+    { v: typeof DESK_WARRIOR_TEMPLATES !== 'undefined' ? DESK_WARRIOR_TEMPLATES : null, url: 'https://howlwind7126.gumroad.com/l/fxtjzp' },
+    { v: typeof TRAVEL_FIT_TEMPLATES !== 'undefined' ? TRAVEL_FIT_TEMPLATES : null, url: 'https://howlwind7126.gumroad.com/l/usksnn' }
   ];
   for (var i = 0; i < premiumSources.length; i++) {
     var src = premiumSources[i];

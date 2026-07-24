@@ -24,7 +24,7 @@ var TRAVEL_FIT_TEMPLATES = [
     "duration": "2周（免费预览）",
     "progression_criteria": "完整完成所有训练 → 购买完整版解锁Level 2+3",
     "free_preview": true,
-    "gumroad_url": "https://howlwind7126.gumroad.com/l/travel-fit",
+    "gumroad_url": "https://howlwind7126.gumroad.com/l/usksnn",
     "level_desc": "Level 1 是最低维护方案。出差中不需要健身房、不需要器材，25分钟全身自重训练保持状态。3天/周，穿插在会议间隙或早晨起床后。",
     "level_desc_en": "Level 1 is the minimum viable training protocol. No gym, no equipment — 25 min full-body bodyweight sessions to maintain fitness on the road. 3x/week, squeeze between meetings or right after waking up.",
     "days": [
