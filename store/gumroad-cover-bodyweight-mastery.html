@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280, height=720">
+<title>Gumroad Cover — Bodyweight Mastery</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    width: 1280px; height: 720px; 
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+  .cover {
+    width: 1280px; height: 720px;
+    background: linear-gradient(135deg, #00D68F 0%, #00B87A 30%, #0A8F6C 60%, #066B50 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Abstract geometric shapes */
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    background: white;
+  }
+  .shape-1 { width: 600px; height: 600px; top: -200px; right: -100px; }
+  .shape-2 { width: 400px; height: 400px; bottom: -150px; left: -80px; }
+  .shape-3 { width: 200px; height: 200px; top: 100px; left: 300px; opacity: 0.05; }
+  
+  /* Silhouette figure */
+  .figure {
+    position: absolute;
+    left: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 350px;
+    height: 500px;
+  }
+  .figure svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+  }
+  
+  /* Content area */
+  .content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding-left: 300px;
+  }
+  
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .title {
+    font-size: 64px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  }
+  
+  .subtitle {
+    font-size: 28px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+  
+  .progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  
+  .level {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 14px 28px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .level:first-child { border-radius: 12px 0 0 12px; }
+  .level:last-child { border-radius: 0 12px 12px 0; }
+  
+  .arrow {
+    background: rgba(255,255,255,0.2);
+    padding: 14px 16px;
+    color: white;
+    font-size: 20px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+  }
+  
+  /* Bottom bar */
+  .footer {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 16px;
+    letter-spacing: 2px;
+    z-index: 10;
+  }
+  
+  /* IronLog watermark */
+  .watermark {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    color: rgba(255,255,255,0.4);
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 10;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+  
+  <div class="figure">
+    <svg viewBox="0 0 200 400" fill="white">
+      <!-- Stylized calisthenics figure (handstand-ish pose) -->
+      <circle cx="100" cy="40" r="20"/>
+      <line x1="100" y1="60" x2="100" y2="130" stroke="white" stroke-width="12" stroke-linecap="round"/>
+      <line x1="100" y1="80" x2="60" y2="110" stroke="white" stroke-width="8" stroke-linecap="round"/>
+      <line x1="100" y1="80" x2="140" y2="110" stroke="white" stroke-width="8" stroke-linecap="round"/>
+      <line x1="100" y1="130" x2="70" y2="200" stroke="white" stroke-width="10" stroke-linecap="round"/>
+      <line x1="100" y1="130" x2="130" y2="200" stroke="white" stroke-width="10" stroke-linecap="round"/>
+      <line x1="70" y1="200" x2="55" y2="280" stroke="white" stroke-width="8" stroke-linecap="round"/>
+      <line x1="130" y1="200" x2="145" y2="280" stroke="white" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+  </div>
+  
+  <div class="watermark">IRONLOG</div>
+  
+  <div class="content">
+    <div class="badge">PREMIUM PROGRAM</div>
+    <div class="title">Bodyweight<br>Mastery</div>
+    <div class="subtitle">Zero to Advanced · 12-Week Program</div>
+    <div class="progress">
+      <span class="level">🌱 Foundation</span>
+      <span class="arrow">→</span>
+      <span class="level">🔥 Intermediate</span>
+      <span class="arrow">→</span>
+      <span class="level">💀 Advanced</span>
+    </div>
+  </div>
+  
+  <div class="footer">IRONLOG · FREE WORKOUT TRACKER</div>
+</div>
+</body>
+</html>

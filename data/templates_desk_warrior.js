@@ -21,8 +21,10 @@ var DESK_WARRIOR_TEMPLATES = [
     "program": "desk_warrior",
     "level": 1,
     "level_name": "Release（释放）",
-    "duration": "2周",
-    "progression_criteria": "所有动作无疼痛、活动度明显改善 → 解锁Level 2",
+    "duration": "2周（免费预览）",
+    "progression_criteria": "所有动作无疼痛、活动度明显改善 → 购买完整版解锁Level 2+3",
+    "free_preview": true,
+    "gumroad_url": "https://howlwind7126.gumroad.com/l/desk-warrior",
     "level_desc": "Level 1 聚焦于释放。用2周时间解除髋屈肌、胸肌和颈部的长期紧张，同时激活沉睡的核心与臀肌。每天20分钟，5天/周，轻松融入午休或下班后。",
     "level_desc_en": "Level 1 focuses on releasing tension built up from sitting. 2 weeks to unlock tight hip flexors, chest, and neck while waking up dormant core and glutes. Just 20 min/day, 5x/week — easy to fit into lunch break or after work.",
     "days": [

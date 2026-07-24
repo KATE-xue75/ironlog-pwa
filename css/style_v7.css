@@ -250,6 +250,34 @@ body{
   background:#002610; color:#fff; padding:8px; font-size:0.74rem; font-weight:600; z-index:999;
 }
 
+/* ═══════════ PREMIUM TEMPLATE ═══════════ */
+.premium-card{ border:2px solid #00D68F; position:relative; }
+.premium-card::before{
+  content:'⭐ PREMIUM'; position:absolute; top:-12px; right:12px;
+  background:linear-gradient(135deg, #00D68F, #0088ff);
+  color:#fff; font-size:0.7rem; font-weight:700; padding:3px 10px; border-radius:8px;
+  letter-spacing:0.05em;
+}
+.premium-badge{
+  background:linear-gradient(135deg, #FF6B35, #FF8C42) !important;
+  color:#fff !important;
+}
+.premium-cta{
+  margin-top:12px; padding:10px 0 4px;
+  border-top:1px solid #e8e8e8; text-align:center;
+}
+.btn-premium{
+  display:inline-block; padding:10px 24px;
+  background:linear-gradient(135deg, #00D68F, #0088ff);
+  color:#fff !important; border:none; border-radius:10px;
+  font-size:0.9rem; font-weight:700; text-decoration:none;
+  letter-spacing:0.02em; transition:transform 0.15s;
+}
+.btn-premium:hover{ transform:scale(1.03); }
+.premium-note{
+  font-size:0.72rem; color:#889; margin-top:6px;
+}
+
 /* ═══════════ SKELETON ═══════════ */
 .skeleton{
   background:linear-gradient(90deg, #e8efe4 25%, #dce8d8 50%, #e8efe4 75%);

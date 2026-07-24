@@ -21,8 +21,10 @@ var BODYWEIGHT_MASTERY_TEMPLATES = [
     "program": "bodyweight_mastery",
     "level": 1,
     "level_name": "Foundation（基础）",
-    "duration": "4周",
-    "progression_criteria": "完整完成所有组数且动作标准 → 解锁Level 2",
+    "duration": "2周（免费预览）",
+    "progression_criteria": "完整完成所有组数且动作标准 → 购买完整版解锁Level 2+3",
+    "free_preview": true,
+    "gumroad_url": "https://howlwind7126.gumroad.com/l/bzwxpz",
     "level_desc": "Level 1 专注于建立基础力量与正确的动作模式。通过倾斜俯卧撑、跪姿俯卧撑、自重深蹲、臀桥、死挂、平板支撑、弓步蹲和鸟狗式等入门动作，帮助你安全地搭建力量地基。3天/周全身训练，每组8-12次（静态动作20-45秒），每个动作3组。当你能够以标准姿势完成所有组数时，即可晋级Level 2。",
     "level_desc_en": "Level 1 builds fundamental strength and proper movement patterns. Starting with incline pushups, knee pushups, bodyweight squats, glute bridges, dead hangs, plank holds, lunges, and bird dogs — you'll safely build your strength foundation. Full-body sessions 3x/week, 3 sets of 8-12 reps (20-45s for holds). Progress to Level 2 when you can complete all sets with perfect form.",
     "days": [
