@@ -1,22 +1,44 @@
 // IronLog PWA v3 — Main App
 // Design system: Stripe shadows + Apple interactions + Linear restraint
 
-// Helper: merge free templates with premium L1 free previews
+// Helper: merge free templates with premium (L1 preview or full unlock)
+function getPurchaseState() {
+  return {
+    bodyweight_mastery: localStorage.getItem('unlocked_bodyweight_mastery') === 'true',
+    desk_warrior: localStorage.getItem('unlocked_desk_warrior') === 'true',
+    travel_fit: localStorage.getItem('unlocked_travel_fit') === 'true'
+  };
+}
+
 function getAllTemplates() {
   var all = typeof WORKOUT_TEMPLATES !== 'undefined' ? WORKOUT_TEMPLATES.slice() : [];
+  var purchased = getPurchaseState();
+
   var premiumSources = [
-    { v: typeof BODYWEIGHT_MASTERY_TEMPLATES !== 'undefined' ? BODYWEIGHT_MASTERY_TEMPLATES : null, url: 'https://howlwind7126.gumroad.com/l/bzwxpz' },
-    { v: typeof DESK_WARRIOR_TEMPLATES !== 'undefined' ? DESK_WARRIOR_TEMPLATES : null, url: 'https://howlwind7126.gumroad.com/l/fxtjzp' },
-    { v: typeof TRAVEL_FIT_TEMPLATES !== 'undefined' ? TRAVEL_FIT_TEMPLATES : null, url: 'https://howlwind7126.gumroad.com/l/usksnn' }
+    { v: typeof BODYWEIGHT_MASTERY_TEMPLATES !== 'undefined' ? BODYWEIGHT_MASTERY_TEMPLATES : null, key: 'bodyweight_mastery', url: 'https://howlwind7126.gumroad.com/l/bzwxpz' },
+    { v: typeof DESK_WARRIOR_TEMPLATES !== 'undefined' ? DESK_WARRIOR_TEMPLATES : null, key: 'desk_warrior', url: 'https://howlwind7126.gumroad.com/l/fxtjzp' },
+    { v: typeof TRAVEL_FIT_TEMPLATES !== 'undefined' ? TRAVEL_FIT_TEMPLATES : null, key: 'travel_fit', url: 'https://howlwind7126.gumroad.com/l/usksnn' }
   ];
+
   for (var i = 0; i < premiumSources.length; i++) {
     var src = premiumSources[i];
     if (src.v && src.v.length > 0) {
-      var l1 = JSON.parse(JSON.stringify(src.v[0])); // deep copy L1
-      l1.free_preview = true;
-      l1.gumroad_url = l1.gumroad_url || src.url;
-      l1.duration = '2周（免费预览）';
-      all.push(l1);
+      if (purchased[src.key]) {
+        // Purchased — load all levels
+        for (var j = 0; j < src.v.length; j++) {
+          var level = JSON.parse(JSON.stringify(src.v[j]));
+          level.purchased = true;
+          level.gumroad_url = src.url;
+          all.push(level);
+        }
+      } else {
+        // Free user — show L1 preview only
+        var l1 = JSON.parse(JSON.stringify(src.v[0]));
+        l1.free_preview = true;
+        l1.gumroad_url = l1.gumroad_url || src.url;
+        l1.duration = '2周（免费预览）';
+        all.push(l1);
+      }
     }
   }
   return all;
@@ -207,12 +229,15 @@ const App = {
         const { idx, t, diffClass, diffLabel, tName, tDesc, days, source } = item;
         const dPerWeek = t.days_per_week || days.length;
         const restDayCount = days.filter(d => d.rest).length;
-        const isPremium = t.free_preview || t.premium;
+        const isPremium = t.free_preview;
+        const isPurchased = t.purchased;
+        const isLocked = isPremium || isPurchased;
         const gumroad = t.gumroad_url || '';
 
-        html += `<div class="template-card ${diffClass}${isPremium ? ' premium-card' : ''}">
+        html += `<div class="template-card ${diffClass}${isLocked ? ' premium-card' : ''}">
             <div class="tc-header">
               <span class="tc-badge ${diffClass}">${diffLabel}</span>
+              ${isPurchased ? '<span class="tc-badge unlocked-badge">✅ Unlocked</span>' : ''}
               ${isPremium ? '<span class="tc-badge premium-badge">🔥 Free Preview</span>' : ''}
               <span class="tc-source">${source}</span>
             </div>
@@ -221,7 +246,7 @@ const App = {
             <div class="tc-meta">
               <span>📅 ${dPerWeek - restDayCount} training days</span>
               <span>😴 ${restDayCount > 0 ? restDayCount + ' rest' : ''}</span>
-              ${isPremium ? '<span>⏱️ ' + (t.duration || '2周（免费预览）') + '</span>' : ''}
+              ${isLocked ? '<span>⏱️ ' + (t.duration || (isPurchased ? t.level_desc_en || 'Full Program' : '2周（免费预览）')) + '</span>' : ''}
             </div>
             <div class="tc-days-list">
               ${days.map((d, di) => `

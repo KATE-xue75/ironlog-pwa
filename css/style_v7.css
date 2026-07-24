@@ -262,6 +262,10 @@ body{
   background:linear-gradient(135deg, #FF6B35, #FF8C42) !important;
   color:#fff !important;
 }
+.unlocked-badge{
+  background:linear-gradient(135deg, #2ea043, #3fb950) !important;
+  color:#fff !important;
+}
 .premium-cta{
   margin-top:12px; padding:10px 0 4px;
   border-top:1px solid #e8e8e8; text-align:center;
