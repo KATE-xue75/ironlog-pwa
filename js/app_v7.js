@@ -229,7 +229,7 @@ const App = {
                   ${d.rest ? '😴' : '🏋️'} Day ${di+1}: ${d.focus_en || d.focus || ''}
                 </button>`).join('')}
             </div>
-            ${isPremium ? '<div class="premium-cta"><a href="' + gumroad + '" target="_blank" class="btn btn-premium">⭐ Get Full Program · $3.99 →</a><p class="premium-note">2 weeks free · one-time purchase · lifetime access</p></div>' : ''}
+            ${isPremium ? '<div class="premium-cta"><a href="' + gumroad + '" target="_blank" class="btn btn-premium">⭐ Get Full Program · ' + (t.price || '$9.99') + ' →</a><p class="premium-note">2 weeks free · one-time purchase · lifetime access</p></div>' : ''}
             </div>`;
       });
       html += `</div></div>`;
