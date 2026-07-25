@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="No-login, no-ads, local-first calisthenics tracker. Why does tracking a pull-up cost $14.99/mo?">
+  <title>IronLog · No-Login Workout Tracker</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d1117; color: #c9d1d9; line-height: 1.6;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .hero { padding: 80px 0 48px; text-align: center; }
+    .hero h1 {
+      font-size: 32px; font-weight: 700; color: #f0f6fc; margin-bottom: 16px;
+      letter-spacing: -0.5px; line-height: 1.3;
+    }
+    .hero .sub {
+      font-size: 16px; color: #8b949e; max-width: 560px; margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+    .hero .cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 12px 28px; border-radius: 8px;
+      font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.15s;
+    }
+    .btn-primary { background: #238636; color: #fff; border: 1px solid #2ea043; }
+    .btn-primary:hover { background: #2ea043; }
+    .btn-ghost { background: transparent; color: #8b949e; border: 1px solid #30363d; }
+    .btn-ghost:hover { color: #c9d1d9; border-color: #58a6ff; }
+
+    /* Trust badges */
+    .badges {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px; padding: 48px 0; border-top: 1px solid #21262d;
+    }
+    .badge {
+      text-align: center; padding: 24px 16px; background: #161b22;
+      border: 1px solid #21262d; border-radius: 10px;
+    }
+    .badge .icon { font-size: 28px; margin-bottom: 8px; }
+    .badge h3 { font-size: 15px; color: #f0f6fc; margin-bottom: 6px; }
+    .badge p { font-size: 13px; color: #8b949e; line-height: 1.6; }
+
+    /* Features */
+    .features { padding: 48px 0; }
+    .features h2 {
+      font-size: 22px; color: #f0f6fc; margin-bottom: 32px; text-align: center;
+    }
+    .feature {
+      background: #161b22; border: 1px solid #21262d; border-radius: 10px;
+      padding: 24px; margin-bottom: 16px;
+    }
+    .feature h3 { font-size: 16px; color: #f0f6fc; margin-bottom: 8px; }
+    .feature p { font-size: 14px; color: #8b949e; line-height: 1.7; }
+
+    /* FAQ */
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq h2 { font-size: 22px; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .faq-item {
+      background: #161b22; border: 1px solid #21262d; border-radius: 10px;
+      padding: 24px; margin-bottom: 12px;
+    }
+    .faq-item h3 { font-size: 15px; color: #58a6ff; margin-bottom: 8px; }
+    .faq-item p { font-size: 14px; color: #8b949e; line-height: 1.7; }
+
+    /* Footer */
+    .footer {
+      text-align: center; padding: 48px 24px; border-top: 1px solid #21262d;
+      color: #484f58; font-size: 13px;
+    }
+    .footer a { color: #58a6ff; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    .footer-links { margin-top: 12px; display: flex; gap: 16px; justify-content: center; }
+
+    /* highlight text */
+    .hl { color: #58a6ff; }
+    .hl-green { color: #3fb950; }
+
+    @media (max-width: 500px) {
+      .hero { padding: 48px 0 32px; }
+      .hero h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero container">
+  <h1>Why does tracking a simple pull-up require a <span class="hl-green">$14.99/mo</span> subscription?</h1>
+  <p class="sub">
+    It shouldn't. <strong>No subscriptions. No sign-ups. No lock-in.</strong>
+    A hyper-minimalist, local-first calisthenics tracker that handles the Reddit Recommended Routine (RR) and custom progressions without getting in your way.
+  </p>
+  <div class="cta-group">
+    <a href="/" class="btn btn-primary">🏋️ Start Training Now — 100% Free</a>
+    <a href="https://github.com/KATE-xue75/ironlog-pwa" class="btn btn-ghost" target="_blank">View on GitHub ↗</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="badges">
+    <div class="badge">
+      <div class="icon">📱</div>
+      <h3>Local-First & Offline</h3>
+      <p>Your training data lives in your browser's LocalStorage. Works in the deepest basement gym without a signal.</p>
+    </div>
+    <div class="badge">
+      <div class="icon">🔓</div>
+      <h3>Zero Login Required</h3>
+      <p>Open the app, tap your exercises, and go. We don't want your email, phone number, or password.</p>
+    </div>
+    <div class="badge">
+      <div class="icon">📊</div>
+      <h3>Non-Negotiable Data Export</h3>
+      <p>One-click CSV/JSON export. We will never hold your history hostage behind a paywall.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container features">
+  <h2>Built for People Who Actually Train</h2>
+
+  <div class="feature">
+    <h3>🏠 Renter & Dorm Friendly</h3>
+    <p>No pull-up bar? No wall-mounting allowed? Toggle our <span class="hl">Renter-Friendly filter</span>. The app automatically swaps door-frame or ceiling-dependent movements for ground-based, noise-free bodyweight equivalents. Keep progressing without losing your security deposit.</p>
+  </div>
+
+  <div class="feature">
+    <h3>🦴 Wrist & Joint Protection</h3>
+    <p>Stiff wrists from handstands? Sore shoulders from dips? Switch on <span class="hl">Joint-Friendly mode</span>. Instead of forcing painful reps, our progression algorithm dynamically scales movements to wrist-safe variations so you can heal without stopping.</p>
+  </div>
+
+  <div class="feature">
+    <h3>⚡ One-Tap Gym Usability</h3>
+    <p>On the gym floor, speed is everything. We killed the animations and social feeds. Tap <span class="hl">Same as last set</span>, log your reps in one second, and focus on your rest. An integrated tempo timer keeps your eccentrics honest.</p>
+  </div>
+
+  <div class="feature">
+    <h3>📋 Built-in Community Standards</h3>
+    <p>Pre-loaded with Reddit's legendary <span class="hl">Recommended Routine (RR)</span>, <span class="hl">BWSF</span>, and dynamic progression trees. Watch clear, loopable form GIFs — no heavy video loads, no battery drain.</p>
+  </div>
+</div>
+
+<div class="container faq">
+  <h2>Honest Answers</h2>
+
+  <div class="faq-item">
+    <h3>Q: Why is this actually free? What's the catch?</h3>
+    <p>There is no catch. This app runs entirely in your browser's LocalStorage — zero database syncing. Hosting it on Cloudflare Pages costs me <span class="hl-green">exactly $0</span>. Since I don't pay to store your data, I don't need to charge you a subscription.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q: Are there ads or tracker scripts?</h3>
+    <p>Zero. No Google Analytics, no Meta Pixel, no adware. We respect your attention and your battery life.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Q: How do I back up my data?</h3>
+    <p>Hit Export in the app. You'll get a clean CSV/JSON file instantly. Import it back on any device. No accounts needed.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>IronLog · <a href="https://ironlog-pwa-1ls.pages.dev">ironlog-pwa-1ls.pages.dev</a></p>
+  <div class="footer-links">
+    <a href="https://github.com/KATE-xue75/ironlog-pwa" target="_blank">GitHub</a>
+    <a href="/store/">Training Programs</a>
+    <a href="https://x.com/372624094_kate" target="_blank">X / Twitter</a>
+  </div>
+</div>
+
+</body>
+</html>
