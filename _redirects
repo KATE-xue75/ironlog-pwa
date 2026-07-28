@@ -2,5 +2,6 @@
 /robots.txt     /robots.txt     200
 /google98bfb41784a0c203.html  /google98bfb41784a0c203.html  200
 /exercises/*    /exercises/:splat  200
+/guides/*       /guides/:splat     200
 /store/*        /store/:splat      200
 /*              /index.html        200
