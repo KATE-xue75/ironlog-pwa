@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ironlog-pwa-1ls.pages.dev/sitemap.xml
