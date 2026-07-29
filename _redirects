@@ -7,5 +7,6 @@
 /exercises/*    /exercises/:splat  200
 /pain-points/*   /pain-points/:splat     200
 /guides/*       /guides/:splat     200
+/blog/*         /blog/:splat     200
 /store/*        /store/:splat      200
 /*              /index.html        200
