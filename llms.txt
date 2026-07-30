@@ -1,0 +1,17 @@
+# IronLog — Free, No-Login Workout Tracker
+
+> 100% local-first PWA. No account. No ads. Open source (MIT).
+
+## Core Pages
+- [Home](https://ironlog-pwa-1ls.pages.dev/): Main workout tracker app
+- [Exercise Library](https://ironlog-pwa-1ls.pages.dev/exercises/): 57+ exercises with GIFs & instructions
+- [Training Programs](https://ironlog-pwa-1ls.pages.dev/store/): Premium templates (one-time purchase)
+- [Guides](https://ironlog-pwa-1ls.pages.dev/guides/): Workout tips & how-tos
+- [Pain Points](https://ironlog-pwa-1ls.pages.dev/pain-points/): Common workout tracking problems solved
+
+## About
+IronLog stores all workout data in your browser's localStorage. No backend, no database, no tracking scripts. CSV export, PWA offline support, installable to home screen. Premium templates via Gumroad — lifetime access, no subscription.
+
+## Links
+- [GitHub](https://github.com/KATE-xue75/ironlog-pwa) — Source code (MIT)
+- [Sitemap](https://ironlog-pwa-1ls.pages.dev/sitemap2.xml)

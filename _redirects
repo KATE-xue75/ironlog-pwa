@@ -3,6 +3,7 @@
 /sitemap.txt    /sitemap.txt    200
 /robots.txt     /robots.txt     200
 /google98bfb41784a0c203.html  /google98bfb41784a0c203.html  200
+/llms.txt       /llms.txt       200
 /exercises/*    /exercises/:splat  200
 /pain-points/*   /pain-points/:splat     200
 /guides/*       /guides/:splat     200
