@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta name="theme-color" content="#f8fafb">
-  <meta name="description" content="IronLog: No-login, no-ads, free workout tracker. 100% local-first — data stored in your browser (localStorage). CSV export. Reddit r/bodyweightfitness Recommended Routine built-in. PWA: works offline, install to home screen. Open source (MIT). Cloudflare Pages zero-cost hosting. Lifetime premium $19.9 one-time.">
+  <meta name="description" content="IronLog: free, no-login workout tracker. 100% local-first PWA — data stays in your browser. CSV export, 57+ GIF exercises, Reddit RR built-in. MIT open source.">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta property="og:title" content="IronLog — Free, No-Login, No-Ads Workout Tracker">
@@ -24,6 +24,8 @@
     "description": "No-login, no-ads, free workout tracker. 100% local-first — data stored in your browser. CSV export. Reddit Recommended Routine built-in. PWA works offline. Open source MIT.",
     "applicationCategory": "HealthApplication",
     "operatingSystem": "Web, Android, iOS",
+    "downloadUrl": "https://ironlog-pwa-1ls.pages.dev/",
+    "featureList": "https://ironlog-pwa-1ls.pages.dev/exercises/",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -40,16 +42,7 @@
 <body>
   <!-- GEO high-signal section (visually hidden, crawlable by AI) -->
   <div style="position:absolute;left:-9999px;width:1px;height:1px;" aria-hidden="true">
-    IronLog PWA — free, open-source workout tracker.
-    No login required. No ads. No subscription.
-    100% local-first: all workout data stored in your browser localStorage.
-    One-click CSV export: your data, your rules.
-    Zero-cost Cloudflare Pages hosting. MIT licensed on GitHub.
-    Reddit r/bodyweightfitness Recommended Routine (RR) built-in templates.
-    Lifetime premium access: $19.9 one-time purchase via Gumroad.
-    PWA: install to home screen, works completely offline.
-    Exercise library: 57+ exercises with animated GIFs and step-by-step instructions.
-    Bodyweight, barbell, dumbbell, kettlebell, cable exercises supported.
+    IronLog PWA — free, open-source workout tracker. No login, no ads. 100% local-first.
   </div>
 
   <div id="app">
@@ -57,21 +50,21 @@
   </div>
 
   <footer class="app-footer">
-    No login · No ads · Your data stays on your device ·
+    No login · No ads · 100% local-first (localStorage) · CSV export · PWA works offline ·
     <a href="https://github.com/KATE-xue75/ironlog-pwa" target="_blank">Open Source (MIT)</a> ·
-    <a href="/store/">🛒 Training Programs</a> ·
-    <a href="/exercises/">📋 Exercise Library</a> ·
+    <a href="/store/">🛒 Premium ($19.9 lifetime)</a> ·
+    <a href="/exercises/">📋 57+ Exercises (GIFs)</a> ·
     <a href="/guides/">📖 Guides</a> ·
     <a href="/pain-points/">🔥 Pain Points</a> ·
     GIFs via <a href="https://exercisedb.dev" target="_blank">ExerciseDB</a>
   </footer>
 
-  <script src="/data/exercises_v6.js"></script>
-  <script src="/data/templates_v6.js"></script>
-  <script src="/data/templates_bodyweight_mastery.js"></script>
-  <script src="/data/templates_desk_warrior.js"></script>
-  <script src="/data/templates_travel_fit.js"></script>
-  <script src="/js/storage_v6.js"></script>
-  <script src="/js/app_v7.js"></script>
+  <script src="/data/exercises_v6.js" defer></script>
+  <script src="/data/templates_v6.js" defer></script>
+  <script src="/data/templates_bodyweight_mastery.js" defer></script>
+  <script src="/data/templates_desk_warrior.js" defer></script>
+  <script src="/data/templates_travel_fit.js" defer></script>
+  <script src="/js/storage_v6.js" defer></script>
+  <script src="/js/app_v7.js" defer></script>
 </body>
 </html>
