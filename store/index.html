@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Training Programs · IronLog</title>
-  <meta name="description" content="IronLog Training Programs — free workout programs included, premium plans for serious progress. PPL, Upper/Lower, Bodyweight, HIIT and more.">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#f8fafb">
-  <link rel="canonical" href="https://ironlog.ask-mind.com/store/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Programs · IronLog</title>
+<meta name="description" content="IronLog Training Programs — free workout programs included, premium plans for serious progress. PPL, Upper/Lower, Bodyweight, HIIT and more.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f8fafb">
+<link rel="canonical" href="https://ironlog.ask-mind.com/store/">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Training Programs · IronLog">
-  <meta property="og:description" content="Free programs included with IronLog. Premium plans for serious progress.">
-  <meta property="og:image" content="https://ironlog.ask-mind.com/og-image.png">
-  <meta property="og:url" content="https://ironlog.ask-mind.com/store/">
-  <meta property="og:site_name" content="IronLog">
-  <meta name="twitter:card" content="summary_large_image">
+<!-- Open Graph with width/height for crawler image loading -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Training Programs · IronLog">
+<meta property="og:description" content="Free programs included with IronLog. Premium plans for serious progress.">
+<meta property="og:image" content="https://ironlog.ask-mind.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://ironlog.ask-mind.com/store/">
+<meta property="og:site_name" content="IronLog">
+<meta name="twitter:card" content="summary_large_image">
 
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "IronLog Training Programs",
-    "description": "Free and premium workout programs for IronLog — the no-login, no-ads workout tracker.",
-    "url": "https://ironlog.ask-mind.com/store/",
-    "publisher": { "@type": "Organization", "name": "IronLog", "url": "https://ironlog.ask-mind.com" },
+<!-- Schema.org: WebPage + mainEntity + breadcrumb (standard structure) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "IronLog Training Programs",
+  "description": "Free and premium workout programs for IronLog — the no-login, no-ads workout tracker.",
+  "url": "https://ironlog.ask-mind.com/store/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "IronLog",
+    "url": "https://ironlog.ask-mind.com",
+    "logo": {"@type":"ImageObject","url":"https://ironlog.ask-mind.com/og-image.png"}
+  },
+  "mainEntity": {
+    "@type": "Product",
+    "name": "Bodyweight Mastery: Zero to Advanced",
+    "description": "3-level bodyweight progression program from beginner to advanced calisthenics",
+    "image": "https://ironlog.ask-mind.com/og-image.png",
     "offers": {
       "@type": "Offer",
-      "itemOffered": {
-        "@type": "Product",
-        "name": "Bodyweight Mastery: Zero to Advanced",
-        "description": "3-level bodyweight progression program",
-        "offers": { "@type": "Offer", "price": "12.99", "priceCurrency": "USD" }
-      }
+      "price": "12.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://howlwind7126.gumroad.com/l/bzwxpz"
     }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://ironlog.ask-mind.com/"},
+      {"@type":"ListItem","position":2,"name":"Training Programs","item":"https://ironlog.ask-mind.com/store/"}
+    ]
   }
-  </script>
+}
+</script>
 
-  <link rel="stylesheet" href="/store/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
+<!-- Preload CSS to reduce crawler load timeout -->
+<link rel="preload" href="/store/style.css" as="style">
+<link rel="stylesheet" href="/store/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
 </head>
 <body>
 
 <header class="store-header">
   <a href="/">⚡ <span>Iron</span>Log</a>
 </header>
+
+<!-- Crawler-friendly hidden full-text summary -->
+<div aria-hidden="true" style="position:absolute;opacity:0;pointer-events:none;height:1px;overflow:hidden;">
+IronLog Training Programs includes six free workout splits: PPL 6-Day, Upper Lower 4-Day, Bodyweight Anytime, HIIT Conditioning, Full Body 3-Day, Bro Split 5-Day. Premium one-time purchase programs: Bodyweight Mastery, Desk Warrior Posture Reset, Travel Fit Anywhere Strength. All free programs work inside the no-login IronLog workout tracker app.
+</div>
 
 <!-- ═══════════ HERO ═══════════ -->
 <section class="hero">
@@ -57,13 +82,13 @@
 <main>
 
   <!-- ═══════════ FREE PROGRAMS ═══════════ -->
-  <h2 class="section-title"><span class="icon">🎁</span> Free Programs</h2>
+  <h2 class="section-title"><span class="icon" aria-hidden="true">🎁</span> Free Programs</h2>
   <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">Included with IronLog — no account, no payment, no catch.</p>
 
   <div class="program-grid">
 
     <div class="program-card">
-      <div class="card-icon">🏋️</div>
+      <div class="card-icon" aria-hidden="true">🏋️</div>
       <h3>PPL 6-Day</h3>
       <p class="card-desc">Push/Pull/Legs split, six days a week. The gold standard for hypertrophy and balanced development.</p>
       <div class="card-tags">
@@ -73,7 +98,7 @@
     </div>
 
     <div class="program-card">
-      <div class="card-icon">📆</div>
+      <div class="card-icon" aria-hidden="true">📆</div>
       <h3>Upper/Lower 4-Day</h3>
       <p class="card-desc">Upper body Monday/Thursday, lower body Tuesday/Friday. Efficient 4-day split for busy schedules.</p>
       <div class="card-tags">
@@ -83,7 +108,7 @@
     </div>
 
     <div class="program-card">
-      <div class="card-icon">🧘</div>
+      <div class="card-icon" aria-hidden="true">🧘</div>
       <h3>Bodyweight Anytime</h3>
       <p class="card-desc">Zero equipment, any location. Push, pull, and leg movements with progressive overload built in.</p>
       <div class="card-tags">
@@ -93,7 +118,7 @@
     </div>
 
     <div class="program-card">
-      <div class="card-icon">🔥</div>
+      <div class="card-icon" aria-hidden="true">🔥</div>
       <h3>HIIT Conditioning</h3>
       <p class="card-desc">High-intensity interval sessions for cardio, fat loss, and endurance. 15–25 min each.</p>
       <div class="card-tags">
@@ -103,7 +128,7 @@
     </div>
 
     <div class="program-card">
-      <div class="card-icon">💪</div>
+      <div class="card-icon" aria-hidden="true">💪</div>
       <h3>Full Body 3-Day</h3>
       <p class="card-desc">Three total-body sessions per week. Perfect for beginners or anyone wanting maximum frequency.</p>
       <div class="card-tags">
@@ -113,7 +138,7 @@
     </div>
 
     <div class="program-card">
-      <div class="card-icon">🎯</div>
+      <div class="card-icon" aria-hidden="true">🎯</div>
       <h3>Bro Split 5-Day</h3>
       <p class="card-desc">Classic body part split: chest, back, legs, shoulders, arms. One muscle group per session.</p>
       <div class="card-tags">
@@ -125,7 +150,7 @@
   </div>
 
   <!-- ═══════════ PREMIUM PROGRAMS ═══════════ -->
-  <h2 class="section-title"><span class="icon">⭐</span> Premium Programs</h2>
+  <h2 class="section-title"><span class="icon" aria-hidden="true">⭐</span> Premium Programs</h2>
   <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">Expert-designed progression plans. One-time purchase, yours forever.</p>
 
   <div class="premium-section">
@@ -162,24 +187,24 @@
 
       <div class="price-row">
         <div class="price">$12.99 <span>one-time</span></div>
-        <a href="https://howlwind7126.gumroad.com/l/bzwxpz" class="buy-btn" title="Bodyweight Mastery on Gumroad">Get It on Gumroad →</a>
+        <a href="https://howlwind7126.gumroad.com/l/bzwxpz" class="buy-btn" rel="noopener noreferrer" target="_blank" title="Bodyweight Mastery on Gumroad">Get It on Gumroad →</a>
       </div>
     </div>
 
     <!-- Teaser mini cards for future premium programs -->
     <div class="premium-mini-grid">
       <div class="premium-mini">
-        <h4>🪑 Desk Warrior: Posture Reset</h4>
+        <h4><span aria-hidden="true">🪑</span> Desk Warrior: Posture Reset</h4>
         <p>3-level program for desk workers. Release → Activate → Strengthen. Fix your posture in 6 weeks.</p>
-        <a href="https://howlwind7126.gumroad.com/l/desk-warrior" class="buy-btn" style="font-size:0.8rem;padding:6px 14px;">$9.99 on Gumroad →</a>
+        <a href="https://howlwind7126.gumroad.com/l/desk-warrior" class="buy-btn" rel="noopener noreferrer" target="_blank" style="font-size:0.8rem;padding:6px 14px;">$9.99 on Gumroad →</a>
       </div>
       <div class="premium-mini">
-        <h4>✈️ Travel Fit: Anywhere Strength</h4>
+        <h4><span aria-hidden="true">✈️</span> Travel Fit: Anywhere Strength</h4>
         <p>Zero-equipment, hotel-room-friendly. 25-30 min sessions. Stay fit on the road.</p>
-        <a href="https://howlwind7126.gumroad.com/l/travel-fit" class="buy-btn" style="font-size:0.8rem;padding:6px 14px;">$9.99 on Gumroad →</a>
+        <a href="https://howlwind7126.gumroad.com/l/travel-fit" class="buy-btn" rel="noopener noreferrer" target="_blank" style="font-size:0.8rem;padding:6px 14px;">$9.99 on Gumroad →</a>
       </div>
       <div class="premium-mini">
-        <h4>🏆 Competition Prep</h4>
+        <h4><span aria-hidden="true">🏆</span> Competition Prep</h4>
         <p>Peaking &amp; meet-day programming — coming later</p>
       </div>
     </div>
