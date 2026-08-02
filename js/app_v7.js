@@ -388,8 +388,8 @@ const App = {
     if (!ex) return;
     const weight = parseFloat(document.getElementById('current-weight')?.value || 0);
     const reps = parseInt(document.getElementById('current-reps')?.value || 0);
-    if (!weight || !reps) {
-      this.showError('Enter weight and reps first');
+    if (isNaN(weight) || isNaN(reps) || weight < 0 || reps <= 0) {
+      this.showError('Enter reps first (weight=0 for bodyweight)');
       return;
     }
     ex.sets_data.push({ weight, reps });
