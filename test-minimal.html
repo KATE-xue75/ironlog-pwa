@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Minimal Test</title>
+</head>
+<body>
+
+<!-- Test 1: Absolute minimum JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to test",
+  "step": [
+    {"@type": "HowToStep", "text": "First step."},
+    {"@type": "HowToStep", "text": "Second step."},
+    {"@type": "HowToStep", "text": "Third step."}
+  ]
+}
+</script>
+
+<h1>How to test</h1>
+<ol>
+<li>First step.</li>
+<li>Second step.</li>
+<li>Third step.</li>
+</ol>
+
+</body>
+</html>
