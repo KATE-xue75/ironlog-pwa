@@ -25,12 +25,22 @@
     "description": "No-login, no-ads, free workout tracker. 100% local-first — data stored in your browser. CSV export. Reddit Recommended Routine built-in. PWA works offline. Open source MIT.",
     "applicationCategory": "HealthAndFitnessApplication",
     "operatingSystem": "Web, Android, iOS",
+    "brand": {"@type": "Brand", "name": "IronLog"},
     "downloadUrl": "https://ironlog.ask-mind.com/",
     "featureList": "https://ironlog.ask-mind.com/exercises/",
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "USD"
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "doesNotShip": true
+      }
     },
     "author": {
       "@type": "Person",
