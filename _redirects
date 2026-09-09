@@ -11,4 +11,13 @@
 /blog/          /blog/index.html  200
 /blog/*         /blog/:splat     200
 /store/*        /store/:splat      200
+/404.html       /404.html          200
+/test-faq           /404.html   404
+/test-faq.html      /404.html   404
+/test-minimal       /404.html   404
+/test-minimal.html  /404.html   404
+/test-microdata     /404.html   404
+/test-microdata.html /404.html  404
+/landing            /404.html   404
+/landing.html       /404.html   404
 /*              /index.html        200
